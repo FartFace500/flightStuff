@@ -15,6 +15,7 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Purpose:
@@ -31,6 +32,7 @@ public class FlightReader {
             flightInfoList.forEach(f->{
                 System.out.println("\n"+f);
             });
+            System.out.println(flightReader.averageFlightTimePerAirline(flightInfoList).get("ANA"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -67,6 +69,16 @@ public class FlightReader {
 
         List<DTOs.FlightDTO> flightList = Arrays.stream(flights).toList();
         return flightList;
+    }
+
+    public Map<String, LongSummaryStatistics> averageFlightTimePerAirline(List<DTOs.FlightInfo> flightInfo){
+
+        Map<String, LongSummaryStatistics> thing = flightInfo
+                .stream().collect(Collectors
+                        .groupingBy(flight -> flight.getAirline()==null?"NA":flight.getAirline()
+                                , Collectors.summarizingLong(flight -> flight.getDuration().getSeconds())));
+
+        return thing;
     }
 
 
