@@ -78,6 +78,8 @@ public class FlightReader {
                         .groupingBy(flight -> flight.getAirline()==null?"NA":flight.getAirline()
                                 , Collectors.summarizingLong(flight -> flight.getDuration().getSeconds())));
 
+        //TODO: make a sout method down here that makes the result readable in the console
+
         return thing;
     }
 
