@@ -26,15 +26,23 @@ public class FlightReader {
     public static void main(String[] args) {
         FlightReader flightReader = new FlightReader();
         try {
+
             List<DTOs.FlightDTO> flightList = flightReader.getFlightsFromFile("flights.json");
-            List<DTOs.FlightInfo> flightInfoList = flightReader.getFlightInfoDetails(flightList);
-            flightInfoList.forEach(f->{
-                System.out.println("\n"+f);
-            });
+
+           //HERUNDER KAN SES FLY MED ARRIVAL I LHR.
+          /*  List<DTOs.FlightDTO> flightsTooLHR = flightList.stream()
+                    .filter(flight -> "LHR".equals(flight.getArrival().getIata()))
+                    .toList();
+
+            flightsTooLHR.forEach(f -> System.out.println("\n" + f)); */
+
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 
 
 //    public List<FlightDTO> jsonFromFile(String fileName) throws IOException {
