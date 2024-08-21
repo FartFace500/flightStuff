@@ -9,7 +9,7 @@ import java.util.Properties;
  * Author: Thomas Hartmann
  */
 public class Utils {
-    public static void main(String[] args) {
+    public static void main(String[] args) { //GITHUB RULESET TEST
         System.out.println(getPropertyValue("db.name", "properties-from-pom.properties"));
     }
     public static String getPropertyValue(String propName, String ressourceName)  {
