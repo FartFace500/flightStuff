@@ -15,7 +15,7 @@ import java.time.OffsetDateTime;
 public class DTOs {
     @Getter
     @Setter
-//    @NoArgsConstructor
+    @NoArgsConstructor
     @ToString
     @AllArgsConstructor
     @Builder
@@ -26,7 +26,7 @@ public class DTOs {
 
     @Getter
     @Setter
-//    @NoArgsConstructor
+    @NoArgsConstructor
     @ToString
     @AllArgsConstructor
     @Builder
@@ -42,7 +42,7 @@ public class DTOs {
 
     @Getter
     @Setter
-//    @NoArgsConstructor
+    @NoArgsConstructor
     @ToString
     @AllArgsConstructor
     @Builder
@@ -58,7 +58,7 @@ public class DTOs {
 
     @Getter
     @Setter
-//    @NoArgsConstructor
+    @NoArgsConstructor
     @ToString
     @AllArgsConstructor
     @Builder
@@ -70,7 +70,7 @@ public class DTOs {
 
     @Getter
     @Setter
-//    @NoArgsConstructor
+    @NoArgsConstructor
     @ToString
     @AllArgsConstructor
     @Builder
@@ -82,7 +82,7 @@ public class DTOs {
 
     @Getter
     @Setter
-//    @NoArgsConstructor
+    @NoArgsConstructor
     @ToString
     @AllArgsConstructor
     @Builder
