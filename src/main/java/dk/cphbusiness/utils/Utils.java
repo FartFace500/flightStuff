@@ -21,7 +21,7 @@ public class Utils {
         props.load(FlightReader.class.getClassLoader().getResourceAsStream("config.properties"));
         return props.getProperty(key);
     }
-    public static ObjectMapper getObjectMapper() {
+    public ObjectMapper getObjectMapper() { //this method used to be static (this is in case that causes problems)
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         objectMapper.registerModule(new JavaTimeModule());
