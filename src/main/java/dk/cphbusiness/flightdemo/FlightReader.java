@@ -32,7 +32,7 @@ public class FlightReader {
             flightInfoList.forEach(f->{
                 System.out.println("\n"+f);
             });
-            System.out.println(flightReader.averageFlightTimePerAirline(flightInfoList).get("ANA"));
+            System.out.println(flightReader.averageFlightTimePerAirline(flightInfoList).get("ANA")); //remove the ".get()" part to print out info for every airline
         } catch (IOException e) {
             e.printStackTrace();
         }
